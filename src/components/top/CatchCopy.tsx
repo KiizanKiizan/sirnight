@@ -21,6 +21,7 @@ export const CatchCopy = () => {
           className="origin-top"
           width={640}
           height={960}
+          priority
         />
       </div>
     </div>

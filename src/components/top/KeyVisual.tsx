@@ -35,7 +35,6 @@ export const KeyVisual = () => {
               leftAnimateClass="animate-sixthFadeOutPanel"
               rightAnimateClass="animate-firstFadeOutPanel"
               isLeftSquare={false}
-              isLargestContentfulPaint
             />
           </li>
           <li>
@@ -44,7 +43,6 @@ export const KeyVisual = () => {
               leftAnimateClass="animate-secondFadeOutPanel"
               rightAnimateClass="animate-fifthFadeOutPanel"
               isLeftSquare={true}
-              isLargestContentfulPaint
             />
           </li>
           <li>
@@ -53,7 +51,6 @@ export const KeyVisual = () => {
               leftAnimateClass="animate-seventhFadeOutPanel"
               rightAnimateClass="animate-thirdFadeOutPanel"
               isLeftSquare={false}
-              isLargestContentfulPaint
             />
           </li>
           <li>
@@ -62,7 +59,6 @@ export const KeyVisual = () => {
               leftAnimateClass="animate-fourthFadeOutPanel"
               rightAnimateClass="animate-eighthFadeOutPanel"
               isLeftSquare={true}
-              isLargestContentfulPaint
             />
           </li>
           <li>

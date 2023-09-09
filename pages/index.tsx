@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { About } from "../src/components/top/About";
@@ -122,6 +123,10 @@ const Home: NextPage<TProps> = ({
         <Footer />
         <FooterMenu />
       </div>
+      {/* モッピートラッキングタグ */}
+      <Head>
+        <script src="https://ad-track.jp/ad/js/lpjs.js" />
+      </Head>
     </>
   );
 };

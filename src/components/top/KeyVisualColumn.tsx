@@ -8,7 +8,6 @@ type TProps = {
   rightAnimateClass?: string;
   leftAnimateClass?: string;
   isLeftSquare: boolean;
-  isLargestContentfulPaint?: boolean;
 };
 
 export const KeyVisualColumn = ({
@@ -16,7 +15,6 @@ export const KeyVisualColumn = ({
   rightAnimateClass,
   leftAnimateClass,
   isLeftSquare,
-  isLargestContentfulPaint = false,
 }: TProps) => {
   return (
     <div className="flex">
@@ -31,9 +29,10 @@ export const KeyVisualColumn = ({
         <Image
           src={`/images/keyVisuals/main/${imageNames.left}.webp`}
           alt={`key-visual-${imageNames.left}`}
-          width={isLeftSquare ? 425 : 212}
+          width={425}
           height={425}
-          priority={isLargestContentfulPaint}
+          className={`${isLeftSquare ? "w-[425px]" : "w-[212px]"} h-auto`}
+          priority
         />
       </div>
       <div className="relative">
@@ -47,9 +46,10 @@ export const KeyVisualColumn = ({
         <Image
           src={`/images/keyVisuals/main/${imageNames.right}.webp`}
           alt={`key-visual-${imageNames.right}`}
-          width={isLeftSquare ? 212 : 425}
+          width={425}
           height={425}
-          priority={isLargestContentfulPaint}
+          className={`${isLeftSquare ? "w-[212px]" : "w-[425px]"} h-auto`}
+          priority
         />
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { useEffect, useState } from "react";
 import { LinkButton } from "../../src/components/baseParts/LinkButton";
 
@@ -68,11 +69,24 @@ const Thanks: NextPage = () => {
       )}
       {/* モッピートラッキングタグ */}
       {memberId && (
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `<script language='javascript' src='https://ad-track.jp/ad/js/cv.js'></script><script language='javascript'>adtrack_cv.cv('adm_adtr_xuid', 'https://ad-track.jp/ad', '_buyer=22636&_article=21513&_price=&_buid=${memberId}&key1=');</script><noscript><img src="https://ad-track.jp/ad/p/cv?_buyer=22636&_article=21513&_price=&_buid=${memberId}&key1=" width="1" height="1"></noscript>`,
-          }}
-        />
+        <>
+          <Script
+            src="https://ad-track.jp/ad/js/cv.js"
+            onLoad={() => {
+              // @ts-ignore
+              adtrack_cv.cv(
+                "adm_adtr_xuid",
+                "https://ad-track.jp/ad",
+                `_buyer=22636&_article=21513&_price=&_buid=${memberId}&key1=`
+              );
+            }}
+          />
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<img src="https://ad-track.jp/ad/p/cv?_buyer=22636&_article=21513&_price=&_buid=${memberId}&key1=" width="1" height="1">`,
+            }}
+          />
+        </>
       )}
     </div>
   );
