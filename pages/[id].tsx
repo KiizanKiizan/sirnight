@@ -13,7 +13,7 @@ import {
 
 export const getStaticPaths = async () => {
   const paths = Object.values(COMPANY_PATHS).map((path: TCompanyPaths) => path);
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async (content) => {
