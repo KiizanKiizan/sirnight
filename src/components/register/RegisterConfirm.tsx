@@ -111,22 +111,10 @@ export const RegisterConfirm = ({
           <div className="pt-2">
             <p className="text-xs">月額料金</p>
             {isTPlan(plan) ? (
-              <>
-                <p className="pl-3 font-bold">
-                  ¥{plan.price.withoutTax.toLocaleString()}(税込¥
-                  {plan.price.withTax.toLocaleString()})
-                </p>
-                {/* 夏の初月半額キャンペーン */}
-                {/* TODO: キャンペーン期間が過ぎたら削除 */}
-                {new Date() < new Date(2023, 9, 1) &&
-                  new Date() >= new Date(2023, 5, 26) && (
-                    <p className="pl-3 font-bold text-red">
-                      初月のみ：¥{(plan.price.withoutTax / 2).toLocaleString()}
-                      (税込¥
-                      {(plan.price.withTax / 2).toLocaleString()})
-                    </p>
-                  )}
-              </>
+              <p className="pl-3 font-bold">
+                ¥{plan.price.withoutTax.toLocaleString()}(税込¥
+                {plan.price.withTax.toLocaleString()})
+              </p>
             ) : (
               <div className="flex justify-around">
                 <p className="pl-3 font-bold line-through">
