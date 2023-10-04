@@ -47,11 +47,11 @@ export const SceneCoordinates = ({ coordinatesData }: TProps) => {
             subText={content.subText}
             isBlur
           />
-          <div className="absolute bottom-1/2 left-1/2 w-2/3 sm:w-1/2 translate-x-[-50%] translate-y-[50%]">
+          <div className="absolute bottom-1/2 left-1/2 w-2/3 translate-x-[-50%] translate-y-[50%] sm:w-1/2">
             <Button
               onClick={handleClick}
               weight="medium"
-              className="text-[3.5vw] sm:text-sm mx-0 py-5 w-full"
+              className="mx-0 w-full py-5 text-[3.5vw] sm:text-sm"
             >
               コーデをもっと見る
             </Button>

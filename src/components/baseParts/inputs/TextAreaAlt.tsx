@@ -23,7 +23,7 @@ export const TextAreaAlt = ({
   return (
     <textarea
       id={id ?? ""}
-      className={`p-3 w-full rounded-md border border-themeGray bg-clay resize-none ${
+      className={`w-full resize-none rounded-md border border-themeGray bg-clay p-3 ${
         className ?? ""
       }`}
       value={value}

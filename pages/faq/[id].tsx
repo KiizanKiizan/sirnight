@@ -23,7 +23,7 @@ export const FaqCategoryName: NextPage<TProps> = ({
       <NextSeo title={`${faqCategoryName.name}`} />
       <div
         id="container"
-        className="h-full min-h-screen inset-0 text-themeGray"
+        className="inset-0 h-full min-h-screen text-themeGray"
       >
         <Breadcrumb
           lists={[
@@ -33,7 +33,7 @@ export const FaqCategoryName: NextPage<TProps> = ({
         />
         <div>
           <div className="bg-clay py-28" id="faq">
-            <p className="text-[6vw] sm:text-2xl text-center font-extrabold mb-14">{`${faqCategoryName.name}`}</p>
+            <p className="mb-14 text-center text-[6vw] font-extrabold sm:text-2xl">{`${faqCategoryName.name}`}</p>
             <div>
               {faqContents.contents.map((content) => {
                 return (
@@ -50,7 +50,7 @@ export const FaqCategoryName: NextPage<TProps> = ({
               <LinkButton
                 href={"/faq"}
                 variant="text"
-                className="w-3/4 font-bold text-base mt-12 mb-48 rounded-full border"
+                className="mb-48 mt-12 w-3/4 rounded-full border text-base font-bold"
               >
                 FAQ一覧に戻る
               </LinkButton>

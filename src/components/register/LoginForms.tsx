@@ -79,19 +79,19 @@ export const LoginForms = ({ onSubmit, onBack }: TProps) => {
       <div className="px-6">
         <Stepper step="login" />
       </div>
-      <div className="px-12 mt-12">
+      <div className="mt-12 px-12">
         <div className="text-sm text-[#CB5F58]">
           <p>*の項目は入力必須です</p>
           <p>同じLINEアカウントでは複数登録できません</p>
         </div>
         <div className="mt-12">
           {errors.map((error) => (
-            <p key={error} className="bg-[#CB5F58] text-sm text-clay p-3 my-1">
+            <p key={error} className="my-1 bg-[#CB5F58] p-3 text-sm text-clay">
               {error}
             </p>
           ))}
         </div>
-        <div className="pt-12 flex flex-col">
+        <div className="flex flex-col pt-12">
           <div className="pt-8">
             <label htmlFor="email">
               メールアドレス <span className="text-[#CB5F58]">*</span>
@@ -101,7 +101,7 @@ export const LoginForms = ({ onSubmit, onBack }: TProps) => {
               type="email"
               autoComplete="email"
               placeholder="info@leeap.jp"
-              className="p-3 my-3 w-full rounded-md border border-themeGray bg-clay resize-none"
+              className="my-3 w-full resize-none rounded-md border border-themeGray bg-clay p-3"
               onChange={(e) => setEmail(e.target.value)}
               value={email ?? ""}
             ></input>
@@ -154,7 +154,7 @@ export const LoginForms = ({ onSubmit, onBack }: TProps) => {
                   autoComplete="new-password"
                   onChange={(e) => setPassword(e.target.value)}
                   value={password ?? ""}
-                  className="mb-[6px] mt-3 p-3 w-full rounded-md border border-themeGray bg-clay resize-none"
+                  className="mb-[6px] mt-3 w-full resize-none rounded-md border border-themeGray bg-clay p-3"
                 ></input>
                 <div
                   onClick={() => setIsVisible(true)}
@@ -184,13 +184,13 @@ export const LoginForms = ({ onSubmit, onBack }: TProps) => {
           <button
             onClick={handleSubmit}
             disabled={!canRegistered || isLoading}
-            className={`relative inline-block p-3 text-center w-full font-medium text-base mt-12 rounded-full text-slate-200  ${
+            className={`relative mt-12 inline-block w-full rounded-full p-3 text-center text-base font-medium text-slate-200  ${
               !canRegistered || isLoading ? "bg-[#c8c9c3]" : "bg-themeGray"
             }`}
           >
             お支払い情報の入力へ
           </button>
-          <div onClick={onBack} className="text-center text-xs mt-6 pb-24">
+          <div onClick={onBack} className="mt-6 pb-24 text-center text-xs">
             <span className="border-b-[1px] border-themeGray">
               基本情報入力に戻る
             </span>

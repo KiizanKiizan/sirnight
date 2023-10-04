@@ -31,7 +31,7 @@ const CompanyContent: NextPage<TCompanyContent> = (
       <NextSeo title={article.title} />
       <div
         id="container"
-        className="h-full min-h-screen inset-0 text-themeGray"
+        className="inset-0 h-full min-h-screen text-themeGray"
       >
         <Breadcrumb lists={[{ name: article.title }]} />
         <Layout title={article.title}>

@@ -23,9 +23,9 @@ const Thanks: NextPage = () => {
       <NextSeo title="会員登録完了" />
       <div
         id="container"
-        className="h-full min-h-screen inset-0 text-themeGray"
+        className="inset-0 h-full min-h-screen text-themeGray"
       >
-        <h2 className="text-3xl font-bold text-center py-12">会員登録完了</h2>
+        <h2 className="py-12 text-center text-3xl font-bold">会員登録完了</h2>
         <div className="px-6">
           <p className="text-sm">
             会員登録ありがとうございます！

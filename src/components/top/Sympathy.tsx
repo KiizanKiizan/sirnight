@@ -6,10 +6,10 @@ type TProps = {
 export const Sympathy = ({ className }: TProps) => {
   return (
     <div className={`${className}`}>
-      <p className="text-[6vw] sm:text-3xl text-center mx-auto font-bold leading-10">
+      <p className="mx-auto text-center text-[6vw] font-bold leading-10 sm:text-3xl">
         UWearの安心ポイント
       </p>
-      <div className="flex flex-col font-medium px-[30px]">
+      <div className="flex flex-col px-[30px] font-medium">
         <div className="mt-12">
           <Worry type="left" content={<>手元にコーデがない期間ゼロ！</>} />
           <Worry

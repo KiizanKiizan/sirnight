@@ -10,7 +10,7 @@ export const ItemList = ({ type }: TProps) => {
       className={`${type === "tops" ? "w-[500%]" : "w-[300%]"} flex first:mb-7`}
     >
       <ul
-        className={`w-1/2 flex bg-clay ${
+        className={`flex w-1/2 bg-clay ${
           type === "tops"
             ? "animate-infiniteSlideLeft"
             : "animate-infiniteSlideRight"
@@ -35,7 +35,7 @@ export const ItemList = ({ type }: TProps) => {
         </li>
       </ul>
       <ul
-        className={`w-1/2 flex bg-clay ${
+        className={`flex w-1/2 bg-clay ${
           type === "tops"
             ? "animate-infiniteSlideLeft"
             : "animate-infiniteSlideRight"

@@ -12,24 +12,24 @@ type TProps = {
 
 export const NewsContentWrapper = ({ article }: TProps) => {
   return (
-    <div id="container" className="h-full min-h-screen inset-0 text-themeGray">
+    <div id="container" className="inset-0 h-full min-h-screen text-themeGray">
       {/* PCのみ表示する */}
       <div className="hidden sm:block">
         <Header />
       </div>
-      <div className="px-4 sm:pt-[64px] md:w-[750px] mx-auto">
+      <div className="mx-auto px-4 sm:pt-[64px] md:w-[750px]">
         <Breadcrumb
           lists={[
             { name: "お知らせ", path: `/news/page/${1}` },
             { name: `${article.title}` },
           ]}
         />
-        <div className="py-12 border-b-[1px] border-[#D8D8D2]">
+        <div className="border-b-[1px] border-[#D8D8D2] py-12">
           <p className="text-xs">{handleDate({ date: article.publishedAt })}</p>
           <h2 className="pt-2 text-xl font-bold">{`${article.title}`}</h2>
         </div>
         <div className="pt-12 text-sm">
-          <div className="text-right pb-12">
+          <div className="pb-12 text-right">
             <p>{handleDate({ date: article.publishedAt, type: "kanji" })}</p>
             <p>株式会社kiizankiizan</p>
           </div>
@@ -37,7 +37,7 @@ export const NewsContentWrapper = ({ article }: TProps) => {
           <LinkButton
             href={`/news/page/${1}`}
             variant="text"
-            className="w-full font-bold text-base mt-12 mb-48 rounded-full border"
+            className="mb-48 mt-12 w-full rounded-full border text-base font-bold"
           >
             お知らせ一覧に戻る
           </LinkButton>

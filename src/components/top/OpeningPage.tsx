@@ -28,23 +28,23 @@ export const OpeningPage = ({ className }: TProps) => {
   return (
     <div
       id="op-page"
-      className={`fixed inset-0 bg-clay h-screen ${className ?? ""}`}
+      className={`fixed inset-0 h-screen bg-clay ${className ?? ""}`}
     >
-      <div className="absolute top-[41%] w-full left-1/2 translate-x-[-50%] text-center">
+      <div className="absolute left-1/2 top-[41%] w-full translate-x-[-50%] text-center">
         <Image
           id="logo"
           src="/images/logos/gray.svg"
           alt="logo-gray"
           width={300}
           height={65}
-          className="w-[60vw] sm:w-[300px] animate-slideInOpLogo mx-auto"
+          className="mx-auto w-[60vw] animate-slideInOpLogo sm:w-[300px]"
           priority
         />
         <Typography
           id="text"
           color="primary"
           weight="bold"
-          className="text-[4vw] sm:text-xl mt-[7vw] sm:mt-7 opacity-0 animate-slideInOpText"
+          className="mt-[7vw] animate-slideInOpText text-[4vw] opacity-0 sm:mt-7 sm:text-xl"
         >
           服選びの面倒から解放する
         </Typography>
@@ -52,7 +52,7 @@ export const OpeningPage = ({ className }: TProps) => {
           id="sub-text"
           color="primary"
           weight="bold"
-          className="text-[4vw] sm:text-xl mt-[2vw] sm:mt-1 opacity-0 animate-slideInOpSubText"
+          className="mt-[2vw] animate-slideInOpSubText text-[4vw] opacity-0 sm:mt-1 sm:text-xl"
         >
           メンズファッションレンタルサービス
         </Typography>

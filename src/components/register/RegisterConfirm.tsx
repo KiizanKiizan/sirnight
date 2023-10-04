@@ -96,11 +96,11 @@ export const RegisterConfirm = ({
     <div className="h-full px-12">
       {error && (
         <div className="mt-12">
-          <p className="bg-[#CB5F58] text-clay p-3">{error}</p>
+          <p className="bg-[#CB5F58] p-3 text-clay">{error}</p>
         </div>
       )}
       <div className="mt-9">
-        <p className="font-bold text-xl text-center">ご登録プラン</p>
+        <p className="text-center text-xl font-bold">ご登録プラン</p>
         <div className="pt-3">
           <div>
             <p className="text-xs">料金プラン</p>
@@ -150,7 +150,7 @@ export const RegisterConfirm = ({
         </div>
       </div>
       <div className="mt-9">
-        <p className="font-bold text-xl text-center">基本情報</p>
+        <p className="text-center text-xl font-bold">基本情報</p>
         <div className="pt-3">
           <div>
             <p className="text-xs">氏名</p>
@@ -175,7 +175,7 @@ export const RegisterConfirm = ({
         </div>
       </div>
       <div className="mt-9">
-        <p className="font-bold text-xl text-center">ログイン情報</p>
+        <p className="text-center text-xl font-bold">ログイン情報</p>
         <div className="pt-3">
           <div>
             <p className="text-xs">ログインID(メールアドレス)</p>
@@ -184,7 +184,7 @@ export const RegisterConfirm = ({
         </div>
       </div>
       <div className="mt-9">
-        <p className="font-bold text-xl text-center">お支払い情報</p>
+        <p className="text-center text-xl font-bold">お支払い情報</p>
         <div className="pt-3">
           <div>
             <p className="text-xs">カード番号</p>
@@ -201,13 +201,13 @@ export const RegisterConfirm = ({
           id={`register-${plan.enName}`}
           onClick={handleSubmit}
           disabled={isLoading}
-          className={`relative inline-block p-3 text-center w-full font-medium text-base mt-12 rounded-full text-slate-200 ${
+          className={`relative mt-12 inline-block w-full rounded-full p-3 text-center text-base font-medium text-slate-200 ${
             isLoading ? "bg-[#c8c9c3]" : "bg-themeGray"
           }`}
         >
           会員登録をする
         </button>
-        <div onClick={onBack} className="text-center text-xs pt-6 pb-24">
+        <div onClick={onBack} className="pb-24 pt-6 text-center text-xs">
           <span className="border-b-[1px] border-themeGray">
             お支払い情報登録に戻る
           </span>

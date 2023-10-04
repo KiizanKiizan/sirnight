@@ -10,7 +10,7 @@ type TProps = {
 
 export const StepStart = ({ number, title, subTitle, className }: TProps) => {
   return (
-    <li className={`flex-none w-fit snap-always snap-center p-2 ${className}`}>
+    <li className={`w-fit flex-none snap-center snap-always p-2 ${className}`}>
       <Image
         src={`/images/howToStart/${number}.webp`}
         alt={`howToStart-${number}`}
@@ -19,11 +19,11 @@ export const StepStart = ({ number, title, subTitle, className }: TProps) => {
         height={574}
       />
       <div className="mt-9">
-        <p className="font-lora text-[4vw] sm:text-base font-medium">
+        <p className="font-lora text-[4vw] font-medium sm:text-base">
           STEP 0{number}
         </p>
-        <p className="mx-auto mt-0.5 w-[5%] h-[1px] border-b border-dashed border-themeGray"></p>
-        <p className="mt-4 text-[4vw] sm:text-xl font-medium">{title}</p>
+        <p className="mx-auto mt-0.5 h-[1px] w-[5%] border-b border-dashed border-themeGray"></p>
+        <p className="mt-4 text-[4vw] font-medium sm:text-xl">{title}</p>
         <p className="mt-3 text-[2.75vw] sm:text-base">{subTitle}</p>
       </div>
     </li>

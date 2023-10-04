@@ -21,7 +21,7 @@ export const KeyVisualColumn = ({
       <div className="relative">
         {leftAnimateClass !== undefined ? (
           <div
-            className={`w-full h-full z-10 absolute inset-0 bg-clay ${leftAnimateClass}`}
+            className={`absolute inset-0 z-10 h-full w-full bg-clay ${leftAnimateClass}`}
           ></div>
         ) : (
           <></>
@@ -38,7 +38,7 @@ export const KeyVisualColumn = ({
       <div className="relative">
         {rightAnimateClass !== undefined ? (
           <div
-            className={`w-full h-full z-10 absolute inset-0 bg-clay ${rightAnimateClass}`}
+            className={`absolute inset-0 z-10 h-full w-full bg-clay ${rightAnimateClass}`}
           ></div>
         ) : (
           <></>

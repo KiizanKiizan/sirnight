@@ -9,7 +9,7 @@ type TProps = {
 export const Faq = ({ data }: TProps) => {
   return (
     <div className="bg-clay py-28" id="faq">
-      <p className="text-[6vw] sm:text-2xl text-center font-extrabold mb-14">
+      <p className="mb-14 text-center text-[6vw] font-extrabold sm:text-2xl">
         よくあるご質問
       </p>
       <div className="border-b-2 border-solid border-[#D8D8D2]">
@@ -21,12 +21,12 @@ export const Faq = ({ data }: TProps) => {
           />
         ))}
       </div>
-      <div className="bg-clay text-themeGray text-right mt-10 font-medium  w-4/5 mx-auto">
+      <div className="mx-auto mt-10 w-4/5 bg-clay text-right  font-medium text-themeGray">
         <Link href={{ pathname: "/faq" }} className="relative inline-block">
-
-          <span className="text-xs mr-2 absolute top-[20%] -left-[20%]">
+          <span className="absolute left-[-20%] top-[20%] mr-2 text-xs">
             &#9679;
-          </span>もっと見る
+          </span>
+          もっと見る
         </Link>
       </div>
     </div>

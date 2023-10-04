@@ -5,7 +5,7 @@ type TProps = {
 export const NewsContent = ({ content }: TProps) => {
   return (
     <div
-      className="newsContent pb-12 border-b-[1px] border-[#D8D8D2]"
+      className="newsContent border-b-[1px] border-[#D8D8D2] pb-12"
       dangerouslySetInnerHTML={{
         __html: content,
       }}

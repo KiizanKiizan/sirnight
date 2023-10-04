@@ -79,11 +79,11 @@ const Home: NextPage<TProps> = ({
   return (
     <>
       {isOpeningVisible && <OpeningPage className="z-50" />}
-      <div id="container" className="relative text-themeGray z-40">
+      <div id="container" className="relative z-40 text-themeGray">
         <KeyVisual />
         <CatchCopy />
         <ServiceDescription />
-        <div className="overflow-hidden z-10">
+        <div className="z-10 overflow-hidden">
           <ItemList type="tops" />
           <ItemList type="bottoms" />
         </div>

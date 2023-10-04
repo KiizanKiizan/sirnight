@@ -13,17 +13,17 @@ export const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-screen h-[64px] bg-clay border-b-[#D8D8D2] border-b-[1px] z-20">
-      <div className="flex justify-between items-center mx-[24px]">
+    <div className="fixed left-0 top-0 z-20 h-[64px] w-screen border-b-[1px] border-b-[#D8D8D2] bg-clay">
+      <div className="mx-[24px] flex items-center justify-between">
         <Link
           href={{ pathname: "/" }}
-          className="flex justify-center items-center h-[64px]"
+          className="flex h-[64px] items-center justify-center"
         >
           <img src="/images/logos/gray.svg" alt="logo" className="h-[30px]" />
         </Link>
         <Button
           onClick={handleClickPlan}
-          className="w-[120px] flex justify-center items-center cursor-pointer"
+          className="flex w-[120px] cursor-pointer items-center justify-center"
         >
           料金プラン
         </Button>

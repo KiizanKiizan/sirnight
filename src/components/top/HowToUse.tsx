@@ -9,18 +9,18 @@ export const HowToUse = () => {
           alt="keyVisuals-5"
           className="absolute"
         />
-        <div className="absolute bottom-0 left-1/2 translate-x-[-50%] h-[50%] w-full text-white text-[6vw] sm:text-3xl text-center bg-gradient-to-b from-transparent to-black/80">
-          <div className="absolute bottom-0 w-full mb-[12vw] sm:mb-16 leading-[1.5em] font-medium">
+        <div className="absolute bottom-0 left-1/2 h-[50%] w-full translate-x-[-50%] bg-gradient-to-b from-transparent to-black/80 text-center text-[6vw] text-white sm:text-3xl">
+          <div className="absolute bottom-0 mb-[12vw] w-full font-medium leading-[1.5em] sm:mb-16">
             <p className="mb-1">スタイリストが</p>
-            <p className="bg-themeGray px-4 py-2 mb-1 border border-dashed border-white inline-block">
+            <p className="mb-1 inline-block border border-dashed border-white bg-themeGray px-4 py-2">
               あなたに最適なコーデ
             </p>
             <p>を提案します</p>
           </div>
         </div>
       </div>
-      <div className="bg-themeGray pt-[12vw] pb-[20vw] sm:pt-16 sm:pb-24 text-white">
-        <ul className="flex overflow-x-scroll snap-x snap-mandatory hidden-scrollbar">
+      <div className="bg-themeGray pb-[20vw] pt-[12vw] text-white sm:pb-24 sm:pt-16">
+        <ul className="hidden-scrollbar flex snap-x snap-mandatory overflow-x-scroll">
           <StepUse
             number={1}
             imagePath="/images/howToUse/1.gif"

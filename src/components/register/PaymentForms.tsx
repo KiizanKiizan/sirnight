@@ -123,14 +123,14 @@ export const PaymentForms = ({
       <div className="px-6">
         <Stepper step="payment" />
       </div>
-      <div className="px-12 mt-12">
+      <div className="mt-12 px-12">
         <div className="text-sm text-[#CB5F58]">
           <p>*の項目は入力必須です</p>
           <p>登録してもまだ支払いは発生いたしません</p>
         </div>
         <div className="mt-12">
           {errors.map((error) => (
-            <p key="error" className="bg-[#CB5F58] text-sm text-clay p-3 my-1">
+            <p key="error" className="my-1 bg-[#CB5F58] p-3 text-sm text-clay">
               {error}
             </p>
           ))}
@@ -154,14 +154,14 @@ export const PaymentForms = ({
               }}
               placeholder="0000 0000 0000 0000"
               step="1"
-              className="p-3 mt-3 w-full rounded-md border border-themeGray bg-clay resize-none"
+              className="mt-3 w-full resize-none rounded-md border border-themeGray bg-clay p-3"
             />
           </div>
           <div className="pt-8">
             <label>
               有効期限 <span className="text-[#CB5F58]">*</span>
             </label>
-            <div className="flex items-end mt-3">
+            <div className="mt-3 flex items-end">
               <input
                 type="number"
                 min={1}
@@ -178,7 +178,7 @@ export const PaymentForms = ({
                 }}
                 autoComplete="cc-exp-month"
                 placeholder="00"
-                className="p-3 mr-2 w-full rounded-md border border-themeGray bg-clay resize-none"
+                className="mr-2 w-full resize-none rounded-md border border-themeGray bg-clay p-3"
               />
               <span className="w-1/3">月 /</span>
               <input
@@ -197,7 +197,7 @@ export const PaymentForms = ({
                 }}
                 autoComplete="cc-exp-year"
                 placeholder="00"
-                className="p-3 mx-2 w-full rounded-md border border-themeGray bg-clay resize-none"
+                className="mx-2 w-full resize-none rounded-md border border-themeGray bg-clay p-3"
               />
               <span className="">年</span>
             </div>
@@ -223,7 +223,7 @@ export const PaymentForms = ({
               }}
               placeholder="000"
               step="1"
-              className="p-3 mt-3 w-full rounded-md border border-themeGray bg-clay resize-none"
+              className="mt-3 w-full resize-none rounded-md border border-themeGray bg-clay p-3"
             />
           </div>
           <div className="pt-8">
@@ -243,7 +243,7 @@ export const PaymentForms = ({
               }}
               placeholder="TARO YAMADA"
               step="1"
-              className="p-3 mt-3 w-full rounded-md border border-themeGray bg-clay resize-none"
+              className="mt-3 w-full resize-none rounded-md border border-themeGray bg-clay p-3"
             />
           </div>
           <div className="pt-8">
@@ -254,10 +254,10 @@ export const PaymentForms = ({
               onChange={(e) => setSerialCode(e.target.value)}
               placeholder="お持ちの方のみ入力してください"
               step="1"
-              className="p-3 mt-3 w-full rounded-md border border-themeGray bg-clay resize-none"
+              className="mt-3 w-full resize-none rounded-md border border-themeGray bg-clay p-3"
             />
           </div>
-          <div className="text-center mt-12">
+          <div className="mt-12 text-center">
             <input
               id="isAgree"
               type="checkbox"
@@ -266,7 +266,7 @@ export const PaymentForms = ({
               className=""
             />
             <label htmlFor="isAgree">
-              <span className="text-sm ml-2">
+              <span className="ml-2 text-sm">
                 <Link href={COMPANY_PATHS.TERM} target="_blank">
                   <span className="border-b-[1px] border-themeGray">
                     利用規約
@@ -279,13 +279,13 @@ export const PaymentForms = ({
           <button
             onClick={onClick}
             disabled={!canRegistered || isLoading}
-            className={`relative inline-block p-3 text-center w-full font-medium text-base mt-12 rounded-full text-slate-200 ${
+            className={`relative mt-12 inline-block w-full rounded-full p-3 text-center text-base font-medium text-slate-200 ${
               !canRegistered || isLoading ? "bg-[#c8c9c3]" : "bg-themeGray"
             }`}
           >
             確認画面へ
           </button>
-          <div onClick={onBack} className="text-center text-xs mt-6 pb-24">
+          <div onClick={onBack} className="mt-6 pb-24 text-center text-xs">
             <span className="border-b-[1px] border-themeGray">
               ログイン情報入力に戻る
             </span>

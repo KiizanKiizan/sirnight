@@ -11,7 +11,7 @@ type TProps = {
 export const Breadcrumb = ({ lists, className }: TProps) => {
   return (
     <div
-      className={`w-full whitespace-nowrap truncate p-3 h-10 text-[#979B9A] text-xs flex border-b border-[#D8D8D2] space-x-3 ${
+      className={`flex h-10 w-full space-x-3 truncate whitespace-nowrap border-b border-[#D8D8D2] p-3 text-xs text-[#979B9A] ${
         className ?? ""
       }`}
     >

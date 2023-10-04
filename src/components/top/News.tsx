@@ -8,18 +8,21 @@ type TProps = {
 
 export const News = ({ data }: TProps) => {
   return (
-    <div className="bg-clay py-28 w-4/5 mx-auto" id="news">
-      <p className="text-[6vw] sm:text-2xl text-center font-extrabold mb-14">
+    <div className="mx-auto w-4/5 bg-clay py-28" id="news">
+      <p className="mb-14 text-center text-[6vw] font-extrabold sm:text-2xl">
         お知らせ
       </p>
       <div>
         <NewsLinkList data={data} />
-        <div className="bg-clay text-themeGray text-right mt-10 font-medium">
-          <Link href={{ pathname: "/news/page/1" }} className="relative inline-block">
-
-            <span className="text-xs mr-2 absolute top-[20%] -left-[20%]">
+        <div className="mt-10 bg-clay text-right font-medium text-themeGray">
+          <Link
+            href={{ pathname: "/news/page/1" }}
+            className="relative inline-block"
+          >
+            <span className="absolute left-[-20%] top-[20%] mr-2 text-xs">
               &#9679;
-            </span>もっと見る
+            </span>
+            もっと見る
           </Link>
         </div>
       </div>

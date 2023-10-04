@@ -11,28 +11,28 @@ export const Pagination = ({ totalCount, currentPageId }: TProps) => {
   const maxPageId = Math.ceil(totalCount / PER_PAGE);
 
   return (
-    <div className="flex justify-between h-14 mt-10">
+    <div className="mt-10 flex h-14 justify-between">
       {currentPageId === minPageId ? (
-        <span className="bg-[#D8D8D2] rounded-full inline-block w-14 text-center relative">
+        <span className="relative inline-block w-14 rounded-full bg-[#D8D8D2] text-center">
           <img
             src="/images/icons/vector.svg"
             alt="previous-page-icon"
-            className="rotate-180 absolute top-6 left-5 w-4 opacity-50"
+            className="absolute left-5 top-6 w-4 rotate-180 opacity-50"
           />
         </span>
       ) : (
         <Link
           href={`/news/page/${currentPageId - 1}`}
-          className="bg-[#F4F3EF] rounded-full inline-block w-14 text-center relative"
+          className="relative inline-block w-14 rounded-full bg-[#F4F3EF] text-center"
         >
           <img
             src="/images/icons/vector.svg"
             alt="previous-page-icon"
-            className="rotate-180 absolute top-6 left-5 inline w-4"
+            className="absolute left-5 top-6 inline w-4 rotate-180"
           />
         </Link>
       )}
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         <div className="flex">
           <p>{currentPageId}</p>
           <span>／</span>
@@ -40,22 +40,22 @@ export const Pagination = ({ totalCount, currentPageId }: TProps) => {
         </div>
       </div>
       {currentPageId === maxPageId ? (
-        <span className="bg-[#D8D8D2] rounded-full inline-block w-14 text-center relative">
+        <span className="relative inline-block w-14 rounded-full bg-[#D8D8D2] text-center">
           <img
             src="/images/icons/vector.svg"
             alt="next-page-icon"
-            className="absolute top-6 left-5 inline w-4 opacity-50"
+            className="absolute left-5 top-6 inline w-4 opacity-50"
           />
         </span>
       ) : (
         <Link
           href={`/news/page/${currentPageId + 1}`}
-          className="bg-[#F4F3EF] rounded-full inline-block w-14 text-center relative"
+          className="relative inline-block w-14 rounded-full bg-[#F4F3EF] text-center"
         >
           <img
             src="/images/icons/vector.svg"
             alt="next-page-icon"
-            className="absolute top-6 left-5 inline w-4"
+            className="absolute left-5 top-6 inline w-4"
           />
         </Link>
       )}

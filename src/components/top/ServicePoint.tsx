@@ -16,17 +16,17 @@ export const ServicePoint = ({
   return (
     <Animation options={{ threshold: 1, triggerOnce: true }}>
       <div
-        className={`bg-clay flex flex-row p-7 mt-7 ${
+        className={`mt-7 flex flex-row bg-clay p-7 ${
           illustPosition === "right" ? "" : "justify-end"
         }`}
       >
         {illustPosition === "right" ? (
           <>
             <div className="w-2/5">
-              <p className="font-lora text-primary text-[3vw] sm:text-sm w-fit mx-auto border-b border-dashed border-themeGray ">
+              <p className=" mx-auto w-fit border-b border-dashed border-themeGray font-lora text-[3vw] sm:text-sm ">
                 Point
               </p>
-              <h4 className="[writing-mode:vertical-rl] mx-auto text-[4vw] sm:text-xl pt-5 font-medium tracking-widest leading-7 sm:!leading-8">
+              <h4 className="mx-auto pt-5 text-[4vw] font-medium leading-7 tracking-widest [writing-mode:vertical-rl] sm:text-xl sm:!leading-8">
                 {content}
               </h4>
             </div>
@@ -48,10 +48,10 @@ export const ServicePoint = ({
               height={300}
             />
             <div className="w-2/5">
-              <p className="font-lora text-primary text-[3vw] sm:text-sm w-fit mx-auto border-b border-dashed border-themeGray">
+              <p className="mx-auto w-fit border-b border-dashed border-themeGray font-lora text-[3vw] sm:text-sm">
                 Point
               </p>
-              <h4 className="[writing-mode:vertical-rl] mx-auto text-[4vw] sm:text-xl pt-5 font-medium tracking-widest leading-7 sm:!leading-8">
+              <h4 className="mx-auto pt-5 text-[4vw] font-medium leading-7 tracking-widest [writing-mode:vertical-rl] sm:text-xl sm:!leading-8">
                 {content}
               </h4>
             </div>

@@ -17,16 +17,16 @@ export const QuestionAnswer = ({ contentId, question, answer }: TProps) => {
 
   return (
     <div
-      className="border-t-2 border-solid border-[#D8D8D2] text-sm px-[5%]"
+      className="border-t-2 border-solid border-[#D8D8D2] px-[5%] text-sm"
       id={contentId}
     >
-      <div className="grid grid-cols-8 py-8 items-center">
+      <div className="grid grid-cols-8 items-center py-8">
         <span className="col-span-1 justify-self-center">
           <LinkIcon link={`#${contentId}`} />
         </span>
         <div className="col-span-7">
           <div
-            className="flex flex-row justify-between cursor-pointer"
+            className="flex cursor-pointer flex-row justify-between"
             onClick={handleClick}
           >
             <p>{question}</p>
@@ -40,7 +40,7 @@ export const QuestionAnswer = ({ contentId, question, answer }: TProps) => {
       </div>
       <div className="grid grid-cols-8">
         <div
-          className={`pb-8 leading-6 font-normal col-start-2 col-end-8 ${
+          className={`col-start-2 col-end-8 pb-8 font-normal leading-6 ${
             isActive ? "" : "hidden"
           }`}
           dangerouslySetInnerHTML={{

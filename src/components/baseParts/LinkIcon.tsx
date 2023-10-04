@@ -9,7 +9,7 @@ export const LinkIcon = ({ link }: TProps) => {
       <img
         src="/images/icons/link.svg"
         alt="copy-icon"
-        className="w-8 h-8 hover:opacity-40"
+        className="h-8 w-8 hover:opacity-40"
       />
     </Link>
   );

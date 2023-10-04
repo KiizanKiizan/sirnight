@@ -21,7 +21,7 @@ export const ReviewCard = ({ customer, content, type }: TProps) => {
       options={{ threshold: 1, triggerOnce: true }}
     >
       <div
-        className={`w-full my-10 flex relative ${
+        className={`relative my-10 flex w-full ${
           type === "left" ? "justify-end" : ""
         }`}
       >
@@ -30,7 +30,7 @@ export const ReviewCard = ({ customer, content, type }: TProps) => {
             <div className="absolute left-0 w-[15%]">
               <img src={customer.imagePath} alt="customer-icon" />
               <div className="mt-3">
-                <p className="text-xs text-center">
+                <p className="text-center text-xs">
                   {customer.initial}様
                   <br />
                   {customer.age}歳
@@ -39,19 +39,19 @@ export const ReviewCard = ({ customer, content, type }: TProps) => {
                 </p>
               </div>
             </div>
-            <p className="w-[80%] border-2 border-[#D8D8D2] rounded-[16px] p-[6vw] sm:p-7 text-sm">
+            <p className="w-[80%] rounded-[16px] border-2 border-[#D8D8D2] p-[6vw] text-sm sm:p-7">
               {content}
             </p>
           </>
         ) : (
           <>
-            <p className="w-[80%] border-2 border-[#D8D8D2] rounded-[16px] p-[6vw] sm:p-7 text-sm">
+            <p className="w-[80%] rounded-[16px] border-2 border-[#D8D8D2] p-[6vw] text-sm sm:p-7">
               {content}
             </p>
             <div className="absolute right-0 w-[15%]">
               <img src={customer.imagePath} alt="customer-icon" />
               <div className="mt-3">
-                <p className="text-xs text-center">
+                <p className="text-center text-xs">
                   {customer.initial}様
                   <br />
                   {customer.age}歳

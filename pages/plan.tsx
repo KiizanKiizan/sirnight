@@ -43,17 +43,17 @@ const Plan: NextPage = () => {
       <NextSeo title="プラン" />
       <div
         id="container"
-        className="h-full min-h-screen inset-0 text-themeGray"
+        className="inset-0 h-full min-h-screen text-themeGray"
       >
         <Breadcrumb lists={[{ name: "料金プラン" }]} />
-        <h2 className="text-[10vw] sm:text-4xl my-[12vw] sm:my-20 text-center font-bold">
+        <h2 className="my-[12vw] text-center text-[10vw] font-bold sm:my-20 sm:text-4xl">
           料金プラン
         </h2>
         <div>
-          <div id="tab" className="flex h-12 relative mb-8">
+          <div id="tab" className="relative mb-8 flex h-12">
             {plans.map((plan, index) => (
               <div
-                className={`w-1/3 flex justify-center items-center cursor-pointer mx-3 ${
+                className={`mx-3 flex w-1/3 cursor-pointer items-center justify-center ${
                   selectedPlanId === plan.id
                     ? "border-b-2 border-themeGray"
                     : "border-b border-[#C7C9C4]"
@@ -62,7 +62,7 @@ const Plan: NextPage = () => {
                 key={index}
               >
                 <p
-                  className={`font-bold text-[4vw] sm:text-xl cursor-pointer ${
+                  className={`cursor-pointer text-[4vw] font-bold sm:text-xl ${
                     selectedPlanId === plan.id ? "opacity-100" : "opacity-20"
                   }`}
                 >
@@ -75,12 +75,12 @@ const Plan: NextPage = () => {
           <div
             id="carousel"
             ref={carousel}
-            className="flex overflow-x-auto snap-mandatory snap-x hidden-scrollbar"
+            className="hidden-scrollbar flex snap-x snap-mandatory overflow-x-auto"
             onScroll={onScroll}
           >
             {plans.map((plan, index) => (
               <div
-                className={`snap-always snap-center w-[90%] h-full shrink-0 ${
+                className={`h-full w-[90%] shrink-0 snap-center snap-always ${
                   index === 0 && "ml-[5%]"
                 } ${index === plans.length - 1 && "mr-[5%]"}`}
                 key={index}

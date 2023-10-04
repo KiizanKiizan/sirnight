@@ -2,11 +2,11 @@ import { StepStart } from "./StepStart";
 
 export const HowToStart = () => {
   return (
-    <div className="mt-8 pt-24 pb-28 text-center" id="how-to-start">
-      <span className="pb-2 text-[6vw] sm:text-2xl font-medium border-b-2 border-dashed border-bottom border-themeGray">
+    <div className="mt-8 pb-28 pt-24 text-center" id="how-to-start">
+      <span className="border-b-2 border-dashed border-themeGray pb-2 text-[6vw] font-medium sm:text-2xl">
         UWearのはじめ方
       </span>
-      <ul className="flex pt-16 overflow-x-scroll whitespace-nowrap snap-x snap-mandatory hidden-scrollbar">
+      <ul className="hidden-scrollbar flex snap-x snap-mandatory overflow-x-scroll whitespace-nowrap pt-16">
         <StepStart
           number={1}
           title="会員登録とLINEお友達登録"

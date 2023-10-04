@@ -24,8 +24,8 @@ export const Conversion = ({
   };
 
   return (
-    <div className="bg-themeGray overflow-hidden pt-5">
-      <div className="w-[62%] mx-auto pt-[98px] mb-10">
+    <div className="overflow-hidden bg-themeGray pt-5">
+      <div className="mx-auto mb-10 w-[62%] pt-[98px]">
         <Image
           src="/images/logos/white.svg"
           alt="logo-white"
@@ -33,9 +33,9 @@ export const Conversion = ({
           height={85}
         />
       </div>
-      <div className="w-full flex">
-        <div className="w-[20%] relative z-10">
-          <p className="absolute h-full [writing-mode:vertical-rl] text-white left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-center">
+      <div className="flex w-full">
+        <div className="relative z-10 w-[20%]">
+          <p className="absolute left-1/2 top-1/2 h-full translate-x-[-50%] translate-y-[-50%] text-center text-white [writing-mode:vertical-rl]">
             メンズファッションレンタルサービス
           </p>
         </div>
@@ -44,13 +44,13 @@ export const Conversion = ({
           leftImagePath={leftImagePath}
           rightImagePath={rightImagePath}
         />
-        <div className="w-[20%] relative z-10">
-          <p className="absolute h-full [writing-mode:vertical-rl] text-white left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-center">
+        <div className="relative z-10 w-[20%]">
+          <p className="absolute left-1/2 top-1/2 h-full translate-x-[-50%] translate-y-[-50%] text-center text-white [writing-mode:vertical-rl]">
             服選びの面倒から解放する
           </p>
         </div>
       </div>
-      <div className="w-[73%] mx-auto mb-16">
+      <div className="mx-auto mb-16 w-[73%]">
         <LinkButton
           href="/plan"
           onClick={handleClick}

@@ -28,10 +28,10 @@ export const FooterMenu = () => {
   return (
     <>
       <Menu onClick={onClickIcon} footerState={footerState} />
-      <div className="fixed bottom-0 h-[70px] sm:w-[638px] bg-clay flex z-40 border-t border-solid border-[#475156]">
+      <div className="fixed bottom-0 z-40 flex h-[70px] border-t border-solid border-[#475156] bg-clay sm:w-[638px]">
         <Link
           href={{ pathname: "/" }}
-          className="h-full w-1/4 border-r border-solid border-[#475156] flex justify-center items-center"
+          className="flex h-full w-1/4 items-center justify-center border-r border-solid border-[#475156]"
         >
           <Image
             src="/images/logos/gray.svg"
@@ -42,7 +42,7 @@ export const FooterMenu = () => {
           />
         </Link>
         <div
-          className="h-full w-1/2 flex justify-center items-center cursor-pointer"
+          className="flex h-full w-1/2 cursor-pointer items-center justify-center"
           onClick={onClickIcon}
         >
           <button className="w-[26%]">
@@ -58,7 +58,7 @@ export const FooterMenu = () => {
         </div>
         <a
           onClick={handleClickPlan}
-          className="h-full w-1/4 bg-themeGray text-clay text-[3.5vw] sm:text-sm flex justify-center items-center cursor-pointer"
+          className="flex h-full w-1/4 cursor-pointer items-center justify-center bg-themeGray text-[3.5vw] text-clay sm:text-sm"
         >
           <span className="w-[77%] text-center [font-feature-settings:'palt'on]">
             料金プラン

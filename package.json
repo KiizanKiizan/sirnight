@@ -6,7 +6,9 @@
     "dev": "next dev -p 3001",
     "build": "next build && next-sitemap",
     "start": "next start -p 3001",
-    "lint": "next lint",
+    "lint": "eslint ./src",
+    "lint:debug": "eslint ./src --debug",
+    "lint:fix": "eslint ./src ./pages --fix",
     "prepare": "mkdir -p .git/hooks && cp git-hooks/* .git/hooks/ && chmod +x .git/hooks/*"
   },
   "dependencies": {
@@ -36,6 +38,7 @@
     "eslint": "8.49.0",
     "eslint-config-next": "^13.4.19",
     "postcss": "^8.4.29",
+    "eslint-plugin-tailwindcss": "^3.13.0",
     "tailwindcss": "^3.3.3",
     "typescript": "5.2.2"
   }

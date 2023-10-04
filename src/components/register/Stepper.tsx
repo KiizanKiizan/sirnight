@@ -19,14 +19,14 @@ export const Stepper = ({ step }: TProps) => {
   return (
     <div className="w-full p-4">
       <div className="flex items-center">
-        <div className="flex items-center relative">
+        <div className="relative flex items-center">
           <div
-            className={`rounded-full h-12 w-12 py-2 border-2 text-center text-xl ${baseClass}`}
+            className={`h-12 w-12 rounded-full border-2 py-2 text-center text-xl ${baseClass}`}
           >
             <span>1</span>
           </div>
           <div
-            className={`absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium ${
+            className={`absolute top-0 -ml-10 mt-16 w-32 text-center text-xs font-medium ${
               step === "base" ? "text-themeGray" : "text-[#C8C9C3]"
             }`}
           >
@@ -34,14 +34,14 @@ export const Stepper = ({ step }: TProps) => {
           </div>
         </div>
         <div className="flex-auto border-t-2 border-dotted border-themeGray"></div>
-        <div className="flex items-center relative text-[#C8C9C3]">
+        <div className="relative flex items-center text-[#C8C9C3]">
           <div
-            className={`rounded-full h-12 w-12 py-2 border-[1px] border-[#C8C9C3] text-center text-xl ${loginClass}`}
+            className={`h-12 w-12 rounded-full border-[1px] border-[#C8C9C3] py-2 text-center text-xl ${loginClass}`}
           >
             <span>2</span>
           </div>
           <div
-            className={`absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium ${
+            className={`absolute top-0 -ml-10 mt-16 w-32 text-center text-xs font-medium ${
               step === "login" ? "text-themeGray" : "text-[#C8C9C3]"
             }`}
           >
@@ -49,14 +49,14 @@ export const Stepper = ({ step }: TProps) => {
           </div>
         </div>
         <div className="flex-auto border-t-2 border-dotted border-themeGray"></div>
-        <div className="flex items-center relative text-[#C8C9C3]">
+        <div className="relative flex items-center text-[#C8C9C3]">
           <div
-            className={`rounded-full h-12 w-12 py-2 border-[1px] border-[#C8C9C3] text-center text-xl ${paymentClass}`}
+            className={`h-12 w-12 rounded-full border-[1px] border-[#C8C9C3] py-2 text-center text-xl ${paymentClass}`}
           >
             <span>3</span>
           </div>
           <div
-            className={`absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium ${
+            className={`absolute top-0 -ml-10 mt-16 w-32 text-center text-xs font-medium ${
               step === "payment" ? "text-themeGray" : "text-[#C8C9C3]"
             }`}
           >

@@ -67,13 +67,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </QueryClientProvider>
         )
       ) : (
-        <div className="w-screen h-full bg-clay font-medium">
+        <div className="h-full w-screen bg-clay font-medium">
           <img
             src="/images/logos/light-gray.svg"
             alt="logo"
-            className="fixed w-[95%] left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]"
+            className="fixed left-1/2 top-1/2 w-[95%] translate-x-[-50%] translate-y-[-50%]"
           />
-          <div className="h-full relative bg-clay sm:w-[640px] mx-auto z-40 sm:border-x border-themeGray">
+          <div className="relative z-40 mx-auto h-full border-themeGray bg-clay sm:w-[640px] sm:border-x">
             <QueryClientProvider client={queryClient}>
               <Component {...pageProps} />
             </QueryClientProvider>

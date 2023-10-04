@@ -18,13 +18,13 @@ const index: NextPage<TProps> = ({ faqData }) => {
       <NextSeo title="FAQ" />
       <div className="h-full min-h-screen text-themeGray">
         <Breadcrumb lists={[{ name: "FAQ" }]} />
-        <div className="w-4/5 pt-14 mx-auto pb-40">
-          <p className="text-3xl text-center font-extrabold mb-14">FAQ</p>
+        <div className="mx-auto w-4/5 pb-40 pt-14">
+          <p className="mb-14 text-center text-3xl font-extrabold">FAQ</p>
           {faqData.contents.map((content, index) => (
             <Link
               href={`/faq/${content.id}`}
               key={content.id}
-              className={`block py-10 border-[#D8D8D2] border-t ${
+              className={`block border-t border-[#D8D8D2] py-10 ${
                 index === faqData.contents.length - 1
                   ? "border-b border-[#D8D8D2]"
                   : ""

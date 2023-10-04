@@ -4,7 +4,7 @@ type TProps = {
 
 export const ArticleLayout = ({ children }: TProps) => {
   return (
-    <div className="w-screen h-full bg-clay font-medium relative z-40">
+    <div className="relative z-40 h-full w-screen bg-clay font-medium">
       {children}
     </div>
   );

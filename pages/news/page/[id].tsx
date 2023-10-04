@@ -19,8 +19,8 @@ const NewsPageId: NextPage<TProps> = ({ articlesData, pageId }: TProps) => {
       <NextSeo title="お知らせ" />
       <div className="h-full min-h-screen text-themeGray">
         <Breadcrumb lists={[{ name: "お知らせ" }]} />
-        <div className="w-4/5 pt-14 mx-auto pb-40">
-          <p className="text-3xl text-center font-extrabold mb-14">お知らせ</p>
+        <div className="mx-auto w-4/5 pb-40 pt-14">
+          <p className="mb-14 text-center text-3xl font-extrabold">お知らせ</p>
           <NewsLinkList data={articlesData} />
           <Pagination
             totalCount={articlesData.totalCount}

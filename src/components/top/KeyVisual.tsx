@@ -26,7 +26,7 @@ export const KeyVisual = () => {
   }, [toggleVisibility]);
 
   return (
-    <div className="w-hull h-screen overflow-hidden relative">
+    <div className="relative h-screen overflow-hidden">
       <div id="key-visuals">
         <ul>
           <li>
@@ -138,8 +138,8 @@ export const KeyVisual = () => {
         </ul>
       </div>
       <span
-        className={`absolute bottom-32 inset-x-0 z-10 block bg-themeGray py-1 px-6 font-lora w-fit mx-auto text-clay rounded-full ${
-          isLabelVisible ? "" : "transition opacity-0 duration-1000"
+        className={`absolute inset-x-0 bottom-32 z-10 mx-auto block w-fit rounded-full bg-themeGray px-6 py-1 font-lora text-clay ${
+          isLabelVisible ? "" : "opacity-0 transition duration-1000"
         }`}
       >
         Scroll

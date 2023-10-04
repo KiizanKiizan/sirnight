@@ -3,5 +3,5 @@ type TProps = {
   readonly className?: string;
 };
 export const FrontValidText = ({ text, className }: TProps) => {
-  return <p className={`text-[#CB5F58] text-xs ${className ?? ""}`}>{text}</p>;
+  return <p className={`text-xs text-[#CB5F58] ${className ?? ""}`}>{text}</p>;
 };
