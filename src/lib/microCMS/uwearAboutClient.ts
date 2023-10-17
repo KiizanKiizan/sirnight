@@ -39,4 +39,13 @@ export type TAboutContent = {
   updatedAt: string;
   publishedAt: string;
   revisedAt: string;
+  category: {
+    id: string;
+    name: string;
+  }[];
 };
+
+export const CATEGORIES = {
+  COORDINATE: "coordinate",
+  ITEM: "item",
+} as const;

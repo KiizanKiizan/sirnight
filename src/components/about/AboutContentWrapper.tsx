@@ -20,7 +20,10 @@ export const AboutContentWrapper = ({ article, aboutData }: TProps) => {
       </div>
       <div className="mx-auto md:w-[750px]">
         <Breadcrumb
-          lists={[{ name: `${article.title}` }]}
+          lists={[
+            { name: "Magazine", path: "/magazine" },
+            { name: `${article.title}` },
+          ]}
           className="mt-0 sm:mt-[64px]"
         />
         <Image
