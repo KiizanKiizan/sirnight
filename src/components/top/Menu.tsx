@@ -43,16 +43,6 @@ export const Menu = ({ onClick, footerState }: TProps) => {
         <Link
           href={{
             pathname: "/",
-            hash: "flow",
-          }}
-          onClick={onClick}
-          className="my-[8vw] block sm:my-10"
-        >
-          コーデの提供方法
-        </Link>
-        <Link
-          href={{
-            pathname: "/",
             hash: "coordinates",
           }}
           onClick={onClick}

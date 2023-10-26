@@ -214,7 +214,7 @@ const Magazine: NextPage<TProps> = ({
       <div className="mb-24 mt-36 px-6">
         <h2 className="mb-12 text-3xl">Instagram</h2>
         <ul className="hidden-scrollbar flex snap-x snap-mandatory gap-x-6 overflow-x-scroll px-12">
-          {instagramData.data.map((post) => (
+          {/* {instagramData.data.map((post) => (
             <Link
               href="https://www.instagram.com/uwearjp/"
               target="_blank"
@@ -231,7 +231,7 @@ const Magazine: NextPage<TProps> = ({
                 />
               </li>
             </Link>
-          ))}
+          ))} */}
         </ul>
       </div>
       <footer className="text-center">UWear</footer>

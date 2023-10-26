@@ -66,12 +66,6 @@ export const Footer = () => {
             UWearで出来ること
           </Link>
           <Link
-            href={{ hash: "flow" }}
-            className="my-[4vw] w-1/2 text-[3.5vw] sm:my-5 sm:text-base"
-          >
-            コーデの提供方法
-          </Link>
-          <Link
             href={{ hash: "coordinates" }}
             className="my-[4vw] w-1/2 text-[3.5vw] sm:my-5 sm:text-base"
           >
