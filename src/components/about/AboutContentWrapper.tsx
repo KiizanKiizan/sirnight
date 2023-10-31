@@ -20,10 +20,7 @@ export const AboutContentWrapper = ({ article, aboutData }: TProps) => {
       </div>
       <div className="mx-auto md:w-[750px]">
         <Breadcrumb
-          lists={[
-            { name: "Magazine", path: "/magazine" },
-            { name: `${article.title}` },
-          ]}
+          lists={[{ name: "Magazine", path: "/magazine" }, { name: `${article.title}` }]}
           className="mt-0 sm:mt-[64px]"
         />
         <Image
@@ -43,16 +40,10 @@ export const AboutContentWrapper = ({ article, aboutData }: TProps) => {
         </div>
       </div>
       <div className="mx-auto w-full pb-24 md:w-[750px] xl:w-[1200px]">
-        <h3 className="mx-4 border-b-[1px] border-[#D8D8D2] py-4 text-center text-3xl">
-          関連記事
-        </h3>
+        <h3 className="mx-4 border-b-[1px] border-[#D8D8D2] py-4 text-center text-3xl">関連記事</h3>
         <div className="flex w-full flex-wrap justify-between">
           {aboutData.contents.map((data, i) => (
-            <Link
-              href={`/about/${data.id}`}
-              key={data.id}
-              className="w-full sm:w-[350px]"
-            >
+            <Link href={`/about/${data.id}`} key={data.id} className="w-full sm:w-[350px]">
               <div
                 className={`mx-4 border-[#D8D8D2] p-8 ${
                   aboutData.contents.length - 1 !== i ? "border-b-[2px]" : ""

@@ -20,7 +20,7 @@ export const LinkButton = ({
   border,
   disabled,
 }: TProps) => {
-  let classes: string[] = [
+  const classes: string[] = [
     "inline-block",
     "py-3",
     "mx-3",
@@ -41,17 +41,13 @@ export const LinkButton = ({
         default:
           return "bg-themeGray text-slate-200";
       }
-    })()
+    })(),
   );
 
   if (border) classes.push("border-2 border-solid border-white");
 
   if (disabled)
-    return (
-      <span className={`${className ?? ""} ${classes.join(" ")}`}>
-        {children}
-      </span>
-    );
+    return <span className={`${className ?? ""} ${classes.join(" ")}`}>{children}</span>;
 
   return (
     <Link

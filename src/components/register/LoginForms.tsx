@@ -18,7 +18,7 @@ export const LoginForms = ({ onSubmit, onBack }: TProps) => {
   const router = useRouter();
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
-  const [isVisible, setIsVisible] = useState<Boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const [errors, setErrors] = useState<string[]>([]);
   const { mutate, isLoading } = useValidationsLogin();
   useEffect(() => {
@@ -26,14 +26,10 @@ export const LoginForms = ({ onSubmit, onBack }: TProps) => {
   }, [errors]);
 
   const PASSWORD_REGAX = /^[a-zA-Z0-9!-/:-@¥\[`\{-~]{8,16}$/;
-  const EMAIL_REGAX =
-    /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;
+  const EMAIL_REGAX = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;
 
   const canRegistered =
-    !!email &&
-    EMAIL_REGAX.test(email) &&
-    !!password &&
-    PASSWORD_REGAX.test(password);
+    !!email && EMAIL_REGAX.test(email) && !!password && PASSWORD_REGAX.test(password);
 
   const handleSubmit = () => {
     if (canRegistered) {
@@ -52,24 +48,20 @@ export const LoginForms = ({ onSubmit, onBack }: TProps) => {
             }
             const memberId = data.data.memberId;
             if (memberId === null) {
-              setErrors([
-                "予期せぬエラーが発生しました。お手数ですが再度入力お願い致します",
-              ]);
+              setErrors(["予期せぬエラーが発生しました。お手数ですが再度入力お願い致します"]);
               return;
             }
             analyzeEvent({ action: "submit", category: "login" }).then(() =>
               onSubmit({
                 email,
                 memberId: memberId,
-              })
+              }),
             );
           },
           onError: () => {
-            setErrors([
-              "予期せぬエラーが発生しました。お手数ですが再度入力お願い致します",
-            ]);
+            setErrors(["予期せぬエラーが発生しました。お手数ですが再度入力お願い致します"]);
           },
-        }
+        },
       );
     }
   };
@@ -191,9 +183,7 @@ export const LoginForms = ({ onSubmit, onBack }: TProps) => {
             お支払い情報の入力へ
           </button>
           <div onClick={onBack} className="mt-6 pb-24 text-center text-xs">
-            <span className="border-b-[1px] border-themeGray">
-              基本情報入力に戻る
-            </span>
+            <span className="border-b-[1px] border-themeGray">基本情報入力に戻る</span>
           </div>
         </div>
       </div>

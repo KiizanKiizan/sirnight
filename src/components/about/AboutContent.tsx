@@ -8,7 +8,7 @@ type TProps = {
 export const AboutContent = ({ body }: TProps) => {
   return (
     <>
-      {body.map((content, _) => {
+      {body.map((content) => {
         return content.fieldId === "talkText" ? (
           <SpeechBalloon
             text={content.text}

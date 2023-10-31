@@ -1,20 +1,10 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  TInstagramResponse,
-  getInstagramPosts,
-} from "../../src/lib/instagram/instagramClient";
+import { TInstagramResponse, getInstagramPosts } from "../../src/lib/instagram/instagramClient";
 import { handleDate } from "../../src/lib/microCMS/handleDate";
-import {
-  CATEGORIES,
-  TAbout,
-  uwearAboutClient,
-} from "../../src/lib/microCMS/uwearAboutClient";
-import {
-  TYouTubeChannel,
-  getYouTubeChannel,
-} from "../../src/lib/youtube/youTubeClient";
+import { CATEGORIES, TAbout, uwearAboutClient } from "../../src/lib/microCMS/uwearAboutClient";
+import { TYouTubeChannel, getYouTubeChannel } from "../../src/lib/youtube/youTubeClient";
 
 type TProps = {
   aboutData: TAbout;
@@ -46,12 +36,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Magazine: NextPage<TProps> = ({
-  aboutData,
-  channelData,
-  itemData,
-  instagramData,
-}) => {
+const Magazine: NextPage<TProps> = ({ aboutData, channelData, itemData }) => {
   return (
     <div className="min-h-screen py-4 text-themeGray">
       {aboutData && aboutData.contents.length > 0 && (
@@ -85,10 +70,7 @@ const Magazine: NextPage<TProps> = ({
                     key={content.id}
                     className={`flex-none snap-always rounded-md active:brightness-125 `}
                   >
-                    <li
-                      className="flex h-full flex-col justify-between"
-                      key={content.id}
-                    >
+                    <li className="flex h-full flex-col justify-between" key={content.id}>
                       <Image
                         src={content.image.url}
                         alt={content.title}
@@ -97,9 +79,7 @@ const Magazine: NextPage<TProps> = ({
                         className="rounded-md object-cover"
                       />
                       <div className="h-[75px] w-[300px]">
-                        <p className="overflow-hidden text-ellipsis">
-                          {content.title}
-                        </p>
+                        <p className="overflow-hidden text-ellipsis">{content.title}</p>
                       </div>
                     </li>
                   </Link>
@@ -139,10 +119,7 @@ const Magazine: NextPage<TProps> = ({
                     key={content.id}
                     className={`flex-none snap-always rounded-md active:brightness-125 `}
                   >
-                    <li
-                      className="flex h-full flex-col justify-between"
-                      key={content.id}
-                    >
+                    <li className="flex h-full flex-col justify-between" key={content.id}>
                       <Image
                         src={content.image.url}
                         alt={content.title}
@@ -151,9 +128,7 @@ const Magazine: NextPage<TProps> = ({
                         className="rounded-md object-cover"
                       />
                       <div className="h-[75px] w-[300px]">
-                        <p className="overflow-hidden text-ellipsis">
-                          {content.title}
-                        </p>
+                        <p className="overflow-hidden text-ellipsis">{content.title}</p>
                       </div>
                     </li>
                   </Link>
@@ -203,9 +178,7 @@ const Magazine: NextPage<TProps> = ({
                   alt={item.snippet.title}
                 />
                 <div className="h-[75px] w-[280px] sm:w-[360px]">
-                  <p className="overflow-hidden text-ellipsis">
-                    {item.snippet.title}
-                  </p>
+                  <p className="overflow-hidden text-ellipsis">{item.snippet.title}</p>
                 </div>
               </li>
             </Link>

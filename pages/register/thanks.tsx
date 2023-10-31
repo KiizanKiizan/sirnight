@@ -21,10 +21,7 @@ const Thanks: NextPage = () => {
   return (
     <div>
       <NextSeo title="会員登録完了" />
-      <div
-        id="container"
-        className="inset-0 h-full min-h-screen text-themeGray"
-      >
+      <div id="container" className="inset-0 h-full min-h-screen text-themeGray">
         <h2 className="py-12 text-center text-3xl font-bold">会員登録完了</h2>
         <div className="px-6">
           <p className="text-sm">
@@ -60,7 +57,7 @@ const Thanks: NextPage = () => {
       {memberId && sessionStorage.getItem("rd_code") && (
         <img
           src={`https://r.moshimo.com/af/r/result?p_id=1063&pc_id=1537&m_v=${memberId}&rd_code=${sessionStorage.getItem(
-            "rd_code"
+            "rd_code",
           )}`}
           width="1"
           height="1"
@@ -73,11 +70,12 @@ const Thanks: NextPage = () => {
           <Script
             src="https://ad-track.jp/ad/js/cv.js"
             onLoad={() => {
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               adtrack_cv.cv(
                 "adm_adtr_xuid",
                 "https://ad-track.jp/ad",
-                `_buyer=22636&_article=21513&_price=&_buid=${memberId}&key1=`
+                `_buyer=22636&_article=21513&_price=&_buid=${memberId}&key1=`,
               );
             }}
           />

@@ -10,16 +10,8 @@ type Props = {
   component?: "span";
 };
 
-export const Typography = ({
-  id,
-  className,
-  children,
-  size,
-  color,
-  weight,
-  component,
-}: Props) => {
-  let classes: string[] = [];
+export const Typography = ({ id, className, children, size, color, weight, component }: Props) => {
+  const classes: string[] = [];
 
   classes.push(
     (() => {
@@ -36,7 +28,7 @@ export const Typography = ({
         default:
           return "text-base";
       }
-    })()
+    })(),
   );
 
   classes.push(
@@ -51,7 +43,7 @@ export const Typography = ({
         default:
           return "text-current";
       }
-    })()
+    })(),
   );
 
   classes.push(
@@ -67,7 +59,7 @@ export const Typography = ({
         default:
           return "font-medium";
       }
-    })()
+    })(),
   );
 
   classes.push();
@@ -75,10 +67,7 @@ export const Typography = ({
   switch (component) {
     case "span":
       return (
-        <span
-          id={id ?? ""}
-          className={`${className ?? ""} ${classes.join(" ")}`}
-        >
+        <span id={id ?? ""} className={`${className ?? ""} ${classes.join(" ")}`}>
           {children}
         </span>
       );

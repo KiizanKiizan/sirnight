@@ -11,7 +11,7 @@ import { GA_ID } from "../src/lib/gtag";
 import { GOOGLE_TAG_MANAGER_ID } from "../src/lib/gtm";
 import "../styles/globals.css";
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+export type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
 
@@ -64,7 +64,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         Component.getLayout(
           <QueryClientProvider client={queryClient}>
             <Component {...pageProps} />
-          </QueryClientProvider>
+          </QueryClientProvider>,
         )
       ) : (
         <div className="h-full w-screen bg-clay font-medium">

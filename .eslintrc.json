@@ -1,8 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
+    "@kiizan_kiizan/eslint-config"
+  ],
   "rules": {
     "@next/next/no-img-element": "off",
-    "@next/next/no-sync-scripts": "off",
-    "no-console": "error"
+    "@next/next/no-sync-scripts": "off"
   }
 }

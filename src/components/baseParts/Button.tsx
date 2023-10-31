@@ -8,14 +8,8 @@ type Props = {
   onClick?: () => void;
 };
 
-export const Button = ({
-  children,
-  className,
-  border,
-  weight,
-  onClick,
-}: Props) => {
-  let classes: string[] = [
+export const Button = ({ children, className, border, weight, onClick }: Props) => {
+  const classes: string[] = [
     "inline-block",
     "py-3",
     "mx-3",
@@ -39,14 +33,11 @@ export const Button = ({
         default:
           return "font-normal";
       }
-    })()
+    })(),
   );
 
   return (
-    <button
-      onClick={onClick}
-      className={`${classes.join(" ")} ${className ?? ""}`}
-    >
+    <button onClick={onClick} className={`${classes.join(" ")} ${className ?? ""}`}>
       {children}
     </button>
   );

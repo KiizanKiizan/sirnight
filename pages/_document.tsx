@@ -1,6 +1,6 @@
 import NextDocument, { Head, Html, Main, NextScript } from "next/document";
 import { GOOGLE_TAG_MANAGER_ID } from "../src/lib/gtm";
-type Props = {};
+type Props = object;
 
 class Document extends NextDocument<Props> {
   render() {

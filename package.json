@@ -18,6 +18,7 @@
     "axios": "^1.5.0",
     "axios-case-converter": "^1.1.0",
     "env-cmd": "^10.1.0",
+    "eslint": "^8.52.0",
     "microcms-js-sdk": "^2.6.1",
     "next": "^13.4.19",
     "next-seo": "^6.1.0",
@@ -29,17 +30,19 @@
     "sharp": "^0.32.5"
   },
   "devDependencies": {
+    "@kiizan_kiizan/eslint-config": "^0.0.7",
+    "@kiizan_kiizan/prettier-config": "^0.0.5",
     "@tailwindcss/custom-forms": "^0.2.1",
     "@types/gtag.js": "^0.0.13",
     "@types/node": "20.8.2",
     "@types/react": "18.2.25",
     "@types/react-dom": "18.2.10",
     "autoprefixer": "^10.4.15",
-    "eslint": "8.50.0",
     "eslint-config-next": "^13.4.19",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "postcss": "^8.4.29",
     "tailwindcss": "^3.3.3",
     "typescript": "5.2.2"
-  }
+  },
+  "prettier": "@kiizan_kiizan/prettier-config"
 }

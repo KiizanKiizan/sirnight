@@ -41,12 +41,12 @@ export const BaseForms = ({ onSubmit }: TProps) => {
     window.scrollTo(0, 0);
   }, [errors]);
 
-  let yearOptions = [];
+  const yearOptions = [];
   for (let year = 1920; year <= new Date().getFullYear(); year++) {
     yearOptions.push(
       <option key={year} value={year}>
         {year}
-      </option>
+      </option>,
     );
   }
   const validKana = (name: string) => {
@@ -97,7 +97,7 @@ export const BaseForms = ({ onSubmit }: TProps) => {
                 height,
                 weight,
                 prefecture,
-              })
+              }),
             );
           } else {
             setErrors(data.data.errors);
@@ -181,9 +181,7 @@ export const BaseForms = ({ onSubmit }: TProps) => {
                 onChange={(e) => setFirstNameKana(e.target.value as string)}
                 placeholder="タロウ"
               />
-              {!validFirstNameKana && (
-                <FrontValidText text="カタカナ入力です" />
-              )}
+              {!validFirstNameKana && <FrontValidText text="カタカナ入力です" />}
             </div>
           </div>
           <div className="pt-8">
