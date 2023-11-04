@@ -49,7 +49,7 @@ const Thanks: NextPage = () => {
       </div>
       {/* Rentracksコンバージョンタグ */}
       {memberId && (
-        <Script id="rentracks-cv-tag">
+        <Script id="rentracks-cv-tag" strategy="afterInteractive">
           {`(function(){
        function loadScriptRTCV(callback){
        var script = document.createElement('script');
