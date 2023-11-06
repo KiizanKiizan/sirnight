@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { useEffect, useState } from "react";
 import { About } from "../src/components/top/About";
 import { CatchCopy } from "../src/components/top/CatchCopy";
@@ -119,6 +120,33 @@ const Home: NextPage<TProps> = ({
       <Head>
         <script src="https://ad-track.jp/ad/js/lpjs.js" />
       </Head>
+      {/* レントラックストラッキングタグ */}
+      <Script id="rentracks-lp-tag" strategy="afterInteractive">
+        {`(function (callback) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src =
+              "https://www.rentracks.jp/js/itp/rt.track.js?t=" +
+              new Date().getTime();
+            if (script.readyState) {
+              script.onreadystatechange = function () {
+                if (
+                  script.readyState === "loaded" ||
+                  script.readyState === "complete"
+                ) {
+                  script.onreadystatechange = null;
+                  callback();
+                }
+              };
+            } else {
+              script.onload = function () {
+                callback();
+              };
+            }
+            document.getElementsByTagName("head")[0].appendChild(script);
+          })(function () {})`}
+        ;
+      </Script>
     </>
   );
 };
