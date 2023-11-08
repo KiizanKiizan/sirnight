@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { TInstagramResponse, getInstagramPosts } from "../../src/lib/instagram/instagramClient";
 import { handleDate } from "../../src/lib/microCMS/handleDate";
 import { CATEGORIES, TAbout, uwearAboutClient } from "../../src/lib/microCMS/uwearAboutClient";
 import { TYouTubeChannel, getYouTubeChannel } from "../../src/lib/youtube/youTubeClient";
@@ -10,7 +9,6 @@ type TProps = {
   aboutData: TAbout;
   itemData: TAbout;
   channelData: TYouTubeChannel;
-  instagramData: TInstagramResponse;
 };
 
 export const getStaticProps = async () => {
@@ -24,13 +22,11 @@ export const getStaticProps = async () => {
   });
 
   const channelData = await getYouTubeChannel();
-  const instagramData = await getInstagramPosts();
   return {
     props: {
       aboutData,
       channelData,
       itemData,
-      instagramData,
     },
     revalidate: 60,
   };
@@ -184,30 +180,7 @@ const Magazine: NextPage<TProps> = ({ aboutData, channelData, itemData }) => {
             </Link>
           ))}
       </ul>
-      <div className="mb-24 mt-36 px-6">
-        <h2 className="mb-12 text-3xl">Instagram</h2>
-        <ul className="hidden-scrollbar flex snap-x snap-mandatory gap-x-6 overflow-x-scroll px-12">
-          {/* {instagramData.data.map((post) => (
-            <Link
-              href="https://www.instagram.com/uwearjp/"
-              target="_blank"
-              key={post.id}
-              className={`flex-none snap-always rounded-md active:brightness-125`}
-            >
-              <li className="flex h-full flex-col justify-between">
-                <img
-                  src={post.media_url}
-                  className="w-[250px] rounded-md "
-                  width={500}
-                  height={500}
-                  alt="uwearjp"
-                />
-              </li>
-            </Link>
-          ))} */}
-        </ul>
-      </div>
-      <footer className="text-center">UWear</footer>
+      <footer className="mt-32 text-center">UWear</footer>
     </div>
   );
 };

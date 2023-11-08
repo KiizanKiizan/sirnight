@@ -120,33 +120,17 @@ export const Menu = ({ onClick, footerState }: TProps) => {
         </a>
       </div>
       <div className="flex space-x-7 pb-14 pt-10">
-        <a
-          href="https://www.instagram.com/UWearJP/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://www.instagram.com/UWearJP/" target="_blank" rel="noopener noreferrer">
           <img
             src="/images/icons/instagram/secondary.svg"
             alt="icon-instagram"
             className="h-[20px] fill-[#ffffff]"
           />
         </a>
-        <a
-          href="https://twitter.com/UWearJP"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/images/icons/twitter/secondary.svg"
-            alt="icon-twitter"
-            className="h-[20px]"
-          />
+        <a href="https://twitter.com/UWearJP" target="_blank" rel="noopener noreferrer">
+          <img src="/images/icons/twitter/secondary.svg" alt="icon-twitter" className="h-[20px]" />
         </a>
-        <a
-          href="https://www.facebook.com/UWearJP/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://www.facebook.com/UWearJP/" target="_blank" rel="noopener noreferrer">
           <img
             src="/images/icons/facebook/secondary.svg"
             alt="icon-facebook"
