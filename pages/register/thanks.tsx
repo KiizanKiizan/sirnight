@@ -92,6 +92,17 @@ const Thanks: NextPage = () => {
           alt=""
         />
       )}
+      {/* 単発もしもアフィリエイトコンバージョンタグ */}
+      {memberId && sessionStorage.getItem("one_shot_rd_code") && (
+        <img
+          src={`https://r.moshimo.com/af/r/result?p_id=5688&pc_id=15710&m_v=${memberId}&rd_code=${sessionStorage.getItem(
+            "one_shot_rd_code",
+          )}`}
+          width="1"
+          height="1"
+          alt=""
+        />
+      )}
       {/* モッピートラッキングタグ */}
       {memberId && (
         <>
