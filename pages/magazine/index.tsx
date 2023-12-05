@@ -3,12 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { handleDate } from "../../src/lib/microCMS/handleDate";
 import { CATEGORIES, TAbout, uwearAboutClient } from "../../src/lib/microCMS/uwearAboutClient";
-import { TYouTubeChannel, getYouTubeChannel } from "../../src/lib/youtube/youTubeClient";
 
 type TProps = {
   aboutData: TAbout;
   itemData: TAbout;
-  channelData: TYouTubeChannel;
+  // channelData: TYouTubeChannel;
 };
 
 export const getStaticProps = async () => {
@@ -21,18 +20,18 @@ export const getStaticProps = async () => {
     queries: { filters: `category[contains]${CATEGORIES.ITEM}` },
   });
 
-  const channelData = await getYouTubeChannel();
+  // const channelData = await getYouTubeChannel();
   return {
     props: {
       aboutData,
-      channelData,
+      // channelData,
       itemData,
     },
     revalidate: 60,
   };
 };
 
-const Magazine: NextPage<TProps> = ({ aboutData, channelData, itemData }) => {
+const Magazine: NextPage<TProps> = ({ aboutData, itemData }) => {
   return (
     <div className="min-h-screen py-4 text-themeGray">
       {aboutData && aboutData.contents.length > 0 && (
@@ -133,7 +132,7 @@ const Magazine: NextPage<TProps> = ({ aboutData, channelData, itemData }) => {
           </div>
         </>
       )}
-      <div className="mb-12 mt-36 px-6">
+      {/* <div className="mb-12 mt-36 px-6">
         <h2 className="mb-12 text-3xl">最新の動画</h2>
         <div className="mb-8 mt-4 text-sm">
           <Link
@@ -179,7 +178,7 @@ const Magazine: NextPage<TProps> = ({ aboutData, channelData, itemData }) => {
               </li>
             </Link>
           ))}
-      </ul>
+      </ul> */}
       <footer className="mt-32 text-center">UWear</footer>
     </div>
   );
