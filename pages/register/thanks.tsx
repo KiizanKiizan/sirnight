@@ -45,42 +45,43 @@ const Thanks: NextPage = () => {
         </div>
       </div>
       {/* Rentracksコンバージョンタグ */}
-      {memberId && (
-        <Script id="rentracks-cv-tag" strategy="afterInteractive">
-          {`(function(){
-       function loadScriptRTCV(callback){
-       var script = document.createElement('script');
-       script.type = 'text/javascript';
-       script.src = 'https://www.rentracks.jp/js/itp/rt.track.js?t=' + (new Date()).getTime();
-       if ( script.readyState ) {
-       script.onreadystatechange = function() {
-       if ( script.readyState === 'loaded' || script.readyState === 'complete' ) {
-       script.onreadystatechange = null;
-       callback();
-       };
-       };
-       } else {
-       script.onload = function() {
-       callback();
-       };
-       };
-       document.getElementsByTagName('head')[0].appendChild(script);
-       }
-       
-       loadScriptRTCV(function(){
-       _rt.sid = 1847;
-       _rt.pid = 2838;
-       _rt.price = 0;
-       _rt.reward = -1;
-       _rt.cname = '';
-       _rt.ctel = '';
-       _rt.cemail = '';
-       _rt.cinfo = ${memberId};
-       rt_tracktag();
-       });
-       }(function(){}))`}
-        </Script>
-      )}
+      {memberId &&
+        [2838, 12443].map((pid) => (
+          <Script key={pid} id="rentracks-cv-tag" strategy="afterInteractive">
+            {`(function(){
+function loadScriptRTCV(callback){
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'https://www.rentracks.jp/js/itp/rt.track.js?t=' + (new Date()).getTime();
+if ( script.readyState ) {
+script.onreadystatechange = function() {
+if ( script.readyState === 'loaded' || script.readyState === 'complete' ) {
+script.onreadystatechange = null;
+callback();
+};
+};
+} else {
+script.onload = function() {
+callback();
+};
+};
+document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+loadScriptRTCV(function(){
+_rt.sid = 1847;
+_rt.pid = ${pid};
+_rt.price = 0;
+_rt.reward = -1;
+_rt.cname = '';
+_rt.ctel = '';
+_rt.cemail = '';
+_rt.cinfo = '${memberId}';
+rt_tracktag();
+});
+}(function(){}));`}
+          </Script>
+        ))}
       {/* もしもアフィリエイトコンバージョンタグ */}
       {memberId && sessionStorage.getItem("rd_code") && (
         <img
