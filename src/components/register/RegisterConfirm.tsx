@@ -75,15 +75,14 @@ export const RegisterConfirm = ({
     };
     mutate(params, {
       onSuccess: () => {
-        const conversionName =
-          planId === undefined ? ONE_SHOT.jpName : findPlanById(planId).jpName;
+        const conversionName = planId === undefined ? ONE_SHOT.jpName : findPlanById(planId).jpName;
         trackConversion(conversionName).then(() =>
           setUserId(memberId).then(() =>
             router.push({
               pathname: "/register/thanks",
               query: { memberId: memberId },
-            })
-          )
+            }),
+          ),
         );
       },
       onError: () => {
@@ -104,30 +103,14 @@ export const RegisterConfirm = ({
         <div className="pt-3">
           <div>
             <p className="text-xs">料金プラン</p>
-            <p className="pl-3 font-bold">{`${plan.jpName}${
-              isTPlan(plan) ? "プラン" : ""
-            }`}</p>
+            <p className="pl-3 font-bold">{`${plan.jpName}${isTPlan(plan) ? "プラン" : ""}`}</p>
           </div>
           <div className="pt-2">
-            <p className="text-xs">月額料金</p>
-            {isTPlan(plan) ? (
-              <p className="pl-3 font-bold">
-                ¥{plan.price.withoutTax.toLocaleString()}(税込¥
-                {plan.price.withTax.toLocaleString()})
-              </p>
-            ) : (
-              <div className="flex justify-around">
-                <p className="pl-3 font-bold line-through">
-                  ¥{plan.price.withoutTax.toLocaleString()}(税込¥
-                  {plan.price.withTax.toLocaleString()})
-                </p>
-                <span className="font-bold">→</span>
-                <p className="pl-3 font-bold">
-                  ¥{plan.discountedPrice.withoutTax.toLocaleString()}(税込¥
-                  {plan.discountedPrice.withTax.toLocaleString()})
-                </p>
-              </div>
-            )}
+            <p className="text-xs">{isTPlan(plan) ? "月額料金" : "レンタル料金"}</p>
+            <p className="pl-3 font-bold">
+              ¥{plan.price.withoutTax.toLocaleString()}(税込¥
+              {plan.price.withTax.toLocaleString()})
+            </p>
           </div>
           {discount && (
             <>
@@ -139,10 +122,7 @@ export const RegisterConfirm = ({
                 <p className="text-xs">割引価格</p>
                 <p className="pl-3 font-bold">
                   ¥{discount.discountPrice.toLocaleString()}(税込¥
-                  {Math.ceil(
-                    discount.discountPrice * (1 + TAX)
-                  ).toLocaleString()}
-                  )
+                  {Math.ceil(discount.discountPrice * (1 + TAX)).toLocaleString()})
                 </p>
               </div>
             </>
@@ -208,9 +188,7 @@ export const RegisterConfirm = ({
           会員登録をする
         </button>
         <div onClick={onBack} className="pb-24 pt-6 text-center text-xs">
-          <span className="border-b-[1px] border-themeGray">
-            お支払い情報登録に戻る
-          </span>
+          <span className="border-b-[1px] border-themeGray">お支払い情報登録に戻る</span>
         </div>
       </div>
     </div>

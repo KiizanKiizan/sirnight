@@ -27,16 +27,8 @@ export const STANDARD_PLAN = {
     withTax: 9800 + 9800 * TAX,
     withoutTax: 9800,
   },
-  targets: [
-    "プライベートでもビジネスでも使いたい方",
-    "大事なビジネスシーンや婚活で利用したい方",
-  ],
-  scenes: [
-    "パーティー",
-    "商談",
-    "高級レストラン",
-    { main: "婚活", sub: "お見合い/デート" },
-  ],
+  targets: ["プライベートでもビジネスでも使いたい方", "大事なビジネスシーンや婚活で利用したい方"],
+  scenes: ["パーティー", "商談", "高級レストラン", { main: "婚活", sub: "お見合い/デート" }],
   coordinateNum: 1,
   itemNum: 4,
   topsNum: 2,
@@ -59,12 +51,7 @@ export const PREMIUM_PLAN = {
     "プライベートでもビジネスでも使いたい方",
     "大事なビジネスシーンや婚活で利用したい方",
   ],
-  scenes: [
-    "パーティー",
-    "商談",
-    "高級レストラン",
-    { main: "婚活", sub: "お見合い/デート" },
-  ],
+  scenes: ["パーティー", "商談", "高級レストラン", { main: "婚活", sub: "お見合い/デート" }],
   coordinateNum: 2,
   itemNum: 7,
   topsNum: 4,
@@ -82,17 +69,10 @@ export const ONE_SHOT = {
     withTax: 5000 + 5000 * TAX,
     withoutTax: 5000,
   },
-  discountedPrice: {
-    withTax: 3000 + 3000 * TAX,
-    withoutTax: 3000,
-  },
 } as const;
 export type TOneShot = typeof ONE_SHOT;
 
-export type TPlan =
-  | typeof LIGHT_PLAN
-  | typeof STANDARD_PLAN
-  | typeof PREMIUM_PLAN;
+export type TPlan = typeof LIGHT_PLAN | typeof STANDARD_PLAN | typeof PREMIUM_PLAN;
 
 export const isTPlan = (value: TPlan | TOneShot): value is TPlan => {
   return value.id !== undefined;
